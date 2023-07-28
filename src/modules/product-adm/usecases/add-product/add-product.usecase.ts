@@ -1,12 +1,12 @@
 import Id from "../../../@shared/domain/value-object/id.value-object";
 import Product from "../../domain/product.entity";
-import ProductGrateway from "../../gateway/product.gateway";
+import ProductGateway from "../../gateway/product.gateway";
 import { AddProductInputDto, AddProductOutputDto } from "./add-product.dto";
 
 export default class AddProductUsecase {
-  private _repository: ProductGrateway;
+  private _repository: ProductGateway;
 
-  constructor(repository: ProductGrateway) {
+  constructor(repository: ProductGateway) {
     this._repository = repository;
   }
 
