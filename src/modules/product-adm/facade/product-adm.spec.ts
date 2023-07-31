@@ -44,4 +44,21 @@ describe("#product_adm_facade_test", () => {
     expect(product.purchasePrice).toBe(input.purchasePrice);
     expect(product.stock).toBe(input.stock);
   });
+
+  it("should check product stock", async () => {
+    const facade = ProductAdmFacadeFactory.create();
+    const input = {
+      id: "1",
+      name: "product 1",
+      description: "product 1 description",
+      purchasePrice: 10,
+      stock: 10,
+    };
+
+    await facade.addProduct(input);
+
+    const result = await facade.checkStock({ productId: "1" });
+
+    expect(result).toEqual({ productId: "1", stock: 10 });
+  });
 });
