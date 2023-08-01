@@ -4,7 +4,6 @@ import AddClientUseCase from "../usecases/add-client/add-client.usecase";
 import ClientModel from "../repositories/client.model";
 import ClientRepository from "../repositories/client.repository";
 import ClientAdmFacade from "./client-adm.facade";
-import FindClientUseCase from "../usecases/find-client/find-client.usecase";
 import ClientAdmFacadeFactory from "../factories/facade.factory";
 
 describe("#client_adm_facade_test", () => {
